@@ -6,7 +6,7 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
-const AddTask = ({setReload, tasks, setTasks}) => {
+const AddTask = ({setReload}) => {
   const { register, handleSubmit } = useForm();
   const { user } = useContext(AuthContext);
   const [option, setOption] = useState();

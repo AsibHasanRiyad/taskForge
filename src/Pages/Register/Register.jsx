@@ -158,15 +158,15 @@ const Register = () => {
                 className="w-full px-3 py-2 mb-3 border rounded-md border-gray-100 focus:outline-[#0065ff] bg-gray-100 text-gray-900"
               />
               {errors.password?.type === "required" && (
-                <span className=" text-red-500">Password is required</span>
+                <span className=" text-gray-200">Password is required</span>
               )}
               {errors.password?.type === "minLength" && (
-                <span className=" text-red-500">
+                <span className=" text-gray-200">
                   Password Must be at least 8 characters
                 </span>
               )}
               {errors.password?.type === "pattern" && (
-                <span className=" text-red-500 ">
+                <span className=" text-gray-200 ">
                   Password must contain at least 1 numeric character at least 1
                   lowercase letter at least 1 uppercase letter at least 1
                   special character
@@ -204,7 +204,7 @@ const Register = () => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="hover:underline hover:text-red-500 text-gray-100"
+            className="hover:underline hover:text-gray-200 text-gray-100"
           >
             Login
           </Link>

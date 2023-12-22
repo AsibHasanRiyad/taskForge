@@ -7,6 +7,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Login = () => {
+  const {setLoading} = useContext(AuthContext)
     const [error, setError] = useState("");
   const { singIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
+        setLoading(false);
         setError(error.message);
         toast.error(error.message, {id: toastId})
       });
@@ -51,6 +53,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+
         setError(error.message);
         toast.error(error.message, {id: toastId});
       });
@@ -58,7 +61,7 @@ const Login = () => {
   return (
 
         <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65]">
-      <div className="flex flex-col p-6 rounded-md sm:p-10  text-white">
+      <div className="flex flex-col p-6 rounded-md sm:p-10  text-white max-w-[500px]">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-6xl font-bold">Login</h1>
           <p className=" text-[#2f2b2b] text-2xl font-semibold">Welcome to Task<span className=" text-white">Forge</span></p>
