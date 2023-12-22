@@ -57,7 +57,7 @@ const AddTask = ({setReload}) => {
           </div>
           <div>
             <label className="text-gray-100  text-sm md:text-lg font-medium ">
-              Priority Level
+              Priority
             </label>
             <Select
               onChange={handelChange}
