@@ -51,12 +51,12 @@ const Ongoing = ({ setComplete, ongoing, setOngoing }) => {
 
   return (
     <div className=" text-gray-100  mb-10">
-      <h1 className=" text-4xl text-gray-100 font-semibold mb-4">Ongoing</h1>
+      <h1 className=" text-2xl text-gray-100 font-semibold mb-4">Ongoing</h1>
       <div className="overflow-x-auto max-h-60 overflow-scroll rounded-lg border-2 shadow-2xl shadow-red-500 glass">
         <table className="table ">
           {/* head */}
           <thead>
-            <tr className=" text-gray-800 text-lg">
+            <tr className=" text-gray-200 text-lg">
               <th></th>
               <th>Title</th>
               <th>Priority</th>

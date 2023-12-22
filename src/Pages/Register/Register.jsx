@@ -182,7 +182,7 @@ const Register = () => {
             >
               Sign Up
             </button>
-            <h1 className=" text-gray-300 mt-3">{error}</h1>
+            <h1 className=" text-gray-200 mt-3">{error}</h1>
           </div>
         </form>
         <div className="flex items-center pt-4 space-x-1">
@@ -200,7 +200,7 @@ const Register = () => {
 
           <p>Continue with Google</p>
         </div>
-        <p className="px-6 text-base text-center text-gray-300">
+        <p className="px-6 text-base text-center text-gray-200">
           Already have an account?{" "}
           <Link
             to="/login"

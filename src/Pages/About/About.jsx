@@ -24,7 +24,7 @@ const About = () => {
 
                     <h1 className="text-xl font-semibold text-gray-100 capitalize dark:text-gray-100">New Components</h1>
 
-                    <p className="text-gray-100 dark:text-gray-300">
+                    <p className="text-gray-100 dark:text-gray-200">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                     </p>
                 </div>
@@ -39,7 +39,7 @@ const About = () => {
 
                     <h1 className="text-xl font-semibold text-gray-100 capitalize dark:text-gray-100">elegant Dark Mode</h1>
 
-                    <p className="text-gray-100 dark:text-gray-300">
+                    <p className="text-gray-100 dark:text-gray-200">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                     </p>
                 </div>
@@ -53,7 +53,7 @@ const About = () => {
 
                     <h1 className="text-xl font-semibold text-gray-100 capitalize dark:text-gray-100">Easy to customiztions</h1>
 
-                    <p className="text-gray-100 dark:text-gray-300">
+                    <p className="text-gray-100 dark:text-gray-200">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                     </p>
                 </div>
@@ -67,7 +67,7 @@ const About = () => {
 
                     <h1 className="text-xl font-semibold text-gray-100 capitalize dark:text-gray-100">Simple & clean designs</h1>
 
-                    <p className="text-gray-100 dark:text-gray-300">
+                    <p className="text-gray-100 dark:text-gray-200">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
                     </p>
                 </div>

@@ -12,7 +12,7 @@ const UserProfile = () => {
         </div>
       </div>
       </div>
-      <h1 className=" text-gray-100 text-2xl lg:text-4xl text-center mb-2">{user?.displayName}</h1>
+      <h1 className=" text-gray-100 text-2xl lg:text-2xl text-center mb-2">{user?.displayName}</h1>
       <h1 className=" text-gray-100 text-base md:text-xl text-center">{user?.email}</h1>
     </div>
   );

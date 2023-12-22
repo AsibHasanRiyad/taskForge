@@ -5,14 +5,26 @@ const Banner = () => {
     <div>
       <div className="bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-none lg:rounded-md ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 items-center px-5 gap-5 lg:px-20 py-8 lg:py-16">
-          <div className=" flex justify-center items-center ">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className=" flex justify-center items-center "
+          >
             <img
               className=" w-full md:w-1/2 lg:w-3/4"
               src="https://i.ibb.co/TPY25Dp/Pngtree-business-and-work-planning-schedule-7516386-1.png"
               alt=""
             />
           </div>
-          <div className=" text-gray-100 space-y-3 md:space-y-6 ">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="700"
+            className=" text-gray-100 space-y-3 md:space-y-6 "
+          >
             <h1 className=" text-3xl md:text-5xl font-semibold">
               Welcome to <span className=" text-[#2d2122]">Task</span>Forge!
             </h1>

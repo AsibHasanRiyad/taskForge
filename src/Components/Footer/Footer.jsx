@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-md ">
+    <div className="bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] ">
       <footer>
         <div className="container px-6 py-8 mx-auto">
           <div className="flex flex-col items-center text-center">
@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center mt-6 -mx-4">
               <a
                 href="#"
-                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
                 {" "}
@@ -21,7 +21,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
                 {" "}
@@ -30,7 +30,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
                 {" "}
@@ -39,7 +39,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
                 {" "}
@@ -48,7 +48,7 @@ const Footer = () => {
 
               <a
                 href="#"
-                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                className="mx-4 text-sm text-gray-200 transition-colors duration-300 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400"
                 aria-label="Reddit"
               >
                 {" "}
@@ -60,7 +60,7 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
 
           <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-            <p className="text-sm text-gray-200 dark:text-gray-300">
+            <p className="text-sm text-gray-200 dark:text-gray-200">
               © Copyright 2023. All Rights Reserved. Riyad
             </p>
 
@@ -68,7 +68,7 @@ const Footer = () => {
 
               <a
                 href="https://www.facebook.com/syd.ryd"
-                className="mx-2 text-gray-200 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                className="mx-2 text-gray-200 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="Facebook"
               >
                 <svg
@@ -83,7 +83,7 @@ const Footer = () => {
 
               <a
                 href="https://github.com/AsibHasanRiyad"
-                className="mx-2 text-gray-200 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                className="mx-2 text-gray-200 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="Github"
               >
                 <svg
