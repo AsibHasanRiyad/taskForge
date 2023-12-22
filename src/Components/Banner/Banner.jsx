@@ -16,7 +16,7 @@ const Banner = () => {
             <h1 className=" text-3xl md:text-5xl font-semibold">
               Welcome to <span className=" text-[#2d2122]">Task</span>Forge!
             </h1>
-            <p className=" text-base md:text-2xl">
+            <p className=" text-base md:text-xl">
               Streamline tasks effortlessly with our intuitive task management
               platform!
             </p>
