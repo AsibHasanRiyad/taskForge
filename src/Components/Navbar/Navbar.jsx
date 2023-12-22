@@ -20,7 +20,7 @@ const Navbar = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar px-4 mt-3 lg:px-20">
+        <div className="w-full navbar px-4 lg:px-20">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -45,13 +45,13 @@ const Navbar = () => {
           </div>
           <div className="flex-1 ">
             <Link to={"/"}>
-              <h1 className=" text-4xl font-semibold text-[#2E1619]">
-                Task<span className=" text-white">Forge</span>
+              <h1 className=" text-3xl font-semibold text-[#2E1619]">
+                Task<span className=" text-gray-100">Forge</span>
               </h1>
             </Link>
           </div>
           <div className="flex-none hidden lg:block">
-            <ul className="flex flex-row gap-5 items-center text-[#2d2d2d] font-semibold text-xl">
+            <ul className="flex flex-row gap-5 items-center text-[#2d2d2d] font-semibold text-lg">
               <li className=" hover:text-gray-100 ">
                 <NavLink
                   to={"/"}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <>
                   <li className="hover:text-gray-100 ">
                     <NavLink
-                      to={"/aboutUs"}
+                      to={"/about"}
                       className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""
                       }
@@ -86,23 +86,12 @@ const Navbar = () => {
                       Contact
                     </NavLink>
                   </li>
-
-                  <li className="hover:text-gray-100 ">
-                    <NavLink
-                      to={"/0"}
-                      className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""
-                      }
-                    >
-                      Something
-                    </NavLink>
-                  </li>
                 </>
               )}
               {user ? (
                 <div className="dropdown dropdown-end">
                   <label tabIndex={0} className=" hover:cursor-pointer avatar ">
-                    <div className="w-14 rounded-full">
+                    <div className="w-12 rounded-full">
                       <img src={user?.photoURL} />
                     </div>
                   </label>
@@ -145,7 +134,7 @@ const Navbar = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu w-60 min-h-full bg-[#FF7C65] text-white">
+        <ul className="menu w-60 min-h-full bg-[#FF7C65] text-gray-100">
           {/* Sidebar content here */}
           <li className=" hover:text-gray-100 ">
             <NavLink
@@ -161,7 +150,7 @@ const Navbar = () => {
             <>
               <li className="hover:text-gray-100 ">
                 <NavLink
-                  to={"/aboutUs"}
+                  to={"/about"}
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
@@ -178,17 +167,6 @@ const Navbar = () => {
                   }
                 >
                   Contact
-                </NavLink>
-              </li>
-
-              <li className="hover:text-gray-100 ">
-                <NavLink
-                  to={"/0"}
-                  className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                  }
-                >
-                  Something
                 </NavLink>
               </li>
             </>

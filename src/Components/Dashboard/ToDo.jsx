@@ -42,7 +42,7 @@ const ToDo = ({ reload, setReload, setOngoing }) => {
       if (res.data.modifiedCount > 0) {
         toast.success("Task ongoing", { id: toastId });
         refetch();
-        setOngoing(true)
+        setOngoing(true);
       } else {
         toast.error("Something Wrong", { id: toastId });
         console.log(res.data);
@@ -51,8 +51,8 @@ const ToDo = ({ reload, setReload, setOngoing }) => {
   };
 
   return (
-    <div className=" text-white  mb-10">
-      <h1 className=" text-4xl text-white font-semibold mb-4">Todo</h1>
+    <div className=" text-gray-100  mb-10">
+      <h1 className=" text-4xl text-gray-100 font-semibold mb-4">Todo</h1>
       <div className="overflow-x-auto max-h-60 overflow-scroll rounded-lg border-2 shadow-2xl shadow-red-500 glass">
         <table className="table ">
           {/* head */}
@@ -76,7 +76,28 @@ const ToDo = ({ reload, setReload, setOngoing }) => {
                     className="radio radio-info glass"
                   />
                 </td>
-                <td className=" overflow-x-scroll">{task.title}</td>
+                <td
+                  onClick={() =>
+                    document.getElementById("my_modal_1").showModal()
+                  }
+                  className=" overflow-x-scroll cursor-pointer"
+                >
+                  {task.title}
+                  <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box text-gray-100 glass text-lg ">
+                      <h3 className="font-bold text-3xl">{task.title}</h3>
+                      <p className="pt-4">Description:{task.postDescription}</p>
+                      <p className="py-1">Deadline:{task.deadline}</p>
+                      <p className="">Priority:{task.priority}</p>
+                      <div className="modal-action">
+                        <form method="dialog">
+                          {/* if there is a button in form, it will close the modal */}
+                          <button className="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                </td>
                 <td>{task.priority}</td>
                 <td>{task.deadline}</td>
                 <td

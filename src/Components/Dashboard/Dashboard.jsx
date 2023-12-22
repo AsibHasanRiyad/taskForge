@@ -14,7 +14,7 @@ const Dashboard = () => {
   // console.log(tasks);
   return (
     <div className=" my-6 lg:my-20 px-4 lg:px-10 bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-md ">
-        <h1 className=" text-center font-semibold text-4xl py-6">Task<span className=" text-white">Bar</span></h1>
+        <h1 className=" text-center font-semibold text-4xl py-6">Task<span className=" text-gray-100">Bar</span></h1>
       <div className=" grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10">
         <div className=" col-span-1 lg:col-span-2">
           <AddTask   setReload={setReload} />
@@ -32,6 +32,7 @@ const Dashboard = () => {
         <Completed setComplete={setComplete} complete={complete} />
         </div>
       </div>
+      <h1 className=" text-center text-gray-300 pb-2">Click over the title to see task details</h1>
     </div>
   );
 };

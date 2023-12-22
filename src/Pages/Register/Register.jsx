@@ -83,10 +83,10 @@ const Register = () => {
   return (
 
         <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65]">
-      <div className="flex flex-col p-6 rounded-md sm:p-10  text-white">
+      <div className="flex flex-col p-6 rounded-md sm:p-10  text-gray-100">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-6xl font-bold">Register</h1>
-          <p className=" text-[#2f2b2b] text-2xl font-semibold">Welcome to Task<span className=" text-white">Forge</span></p>
+          <p className=" text-[#2f2b2b] text-2xl font-semibold">Welcome to Task<span className=" text-gray-100">Forge</span></p>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -178,7 +178,7 @@ const Register = () => {
           <div>
             <button
               type="submit"
-              className="bg-white text-black w-full rounded-md py-3 text-gray"
+              className="bg-white text-slate-800 w-full rounded-md py-3 text-gray"
             >
               Sign Up
             </button>
@@ -194,7 +194,7 @@ const Register = () => {
         </div>
         <div
           onClick={handelGoogleSignIn}
-          className="flex justify-center items-center space-x-2 border m-3 p-2 shadow-lg shadow-red-500 border-rounded cursor-pointer glass rounded hover:bg-white hover:text-black"
+          className="flex justify-center items-center space-x-2 border m-3 p-2 shadow-lg shadow-red-500 border-rounded cursor-pointer glass rounded hover:bg-white hover:text-slate-800"
         >
           {/* <FcGoogle size={32} /> */}
 

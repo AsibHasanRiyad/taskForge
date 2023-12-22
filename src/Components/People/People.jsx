@@ -2,7 +2,7 @@ const People = () => {
   return (
     <section className=" dark:bg-gray-900 mt-10">
       <div className="container px-6 py-10 mx-auto">
-        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-gray-100">
           People from Different Profession&apos;s are using our Website
         </h1>
 
@@ -20,7 +20,7 @@ const People = () => {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-100 capitalize dark:text-gray-100 group-hover:text-gray-100">
               arthur melo
             </h1>
 
@@ -36,7 +36,7 @@ const People = () => {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-100 capitalize dark:text-gray-100 group-hover:text-gray-100">
               Amelia. Anderson
             </h1>
 
@@ -53,7 +53,7 @@ const People = () => {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-100 capitalize dark:text-gray-100 group-hover:text-gray-100">
               Olivia Wathan
             </h1>
 
@@ -69,7 +69,7 @@ const People = () => {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-100 capitalize dark:text-gray-100 group-hover:text-gray-100">
               John Doe
             </h1>
 

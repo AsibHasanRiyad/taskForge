@@ -40,23 +40,23 @@ const AddTask = ({setReload}) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-3 gap-6 mt-4 ">
           <div className="col-span-3 md:col-span-1">
-            <label className="text-white text-base md:text-lg font-medium ">Title</label>
+            <label className="text-gray-100 text-base md:text-lg font-medium ">Title</label>
             <input
               type="text"
               {...register("title", { required: true })}
-              className="block w-full px-4 py-2 mt-2 text-white bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              className="block w-full px-4 py-2 mt-2 text-gray-100 bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
             />
           </div>
           <div className=" col-span-2 md:col-span-1">
-            <label className="text-white text-base md:text-lg font-medium ">Deadline</label>
+            <label className="text-gray-100 text-base md:text-lg font-medium ">Deadline</label>
             <input
               type="date"
               {...register("deadline", { required: true })}
-              className="block w-full px-4 py-2 mt-2 text-white bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              className="block w-full px-4 py-2 mt-2 text-gray-100 bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
             />
           </div>
           <div>
-            <label className="text-white  text-base md:text-lg font-medium ">
+            <label className="text-gray-100  text-sm md:text-lg font-medium ">
               Priority Level
             </label>
             <Select
@@ -68,13 +68,13 @@ const AddTask = ({setReload}) => {
         </div>
         <div className=" flex justify-between items-end gap-5">
           <div className=" mt-6 flex-1">
-            <label className="text-white text-base md:text-lg font-medium ">
+            <label className="text-gray-100 text-base md:text-lg font-medium ">
               Post Description
             </label>
             <textarea
               type="text"
               {...register("postDescription", { required: true })}
-              className="block w-full h-16 px-4 py-2 mt-2 text-white bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              className="block w-full h-16 px-4 py-2 mt-2 text-gray-100 bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
             />
           </div>
           <div className="flex justify-end mt-6">

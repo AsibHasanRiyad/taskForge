@@ -5,7 +5,7 @@ const Footer = () => {
       <footer>
         <div className="container px-6 py-8 mx-auto">
           <div className="flex flex-col items-center text-center">
-            <h1 className=" text-xl md:text-5xl font-semibold text-white">
+            <h1 className=" text-xl md:text-5xl font-semibold text-gray-100">
               <span className=" text-[#2d2122]">Task</span>Forge!
             </h1>
 

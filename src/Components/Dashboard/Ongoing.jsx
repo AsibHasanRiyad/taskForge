@@ -5,13 +5,15 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 import toast from "react-hot-toast";
 
-const Ongoing = ({setComplete, ongoing, setOngoing}) => {
+const Ongoing = ({ setComplete, ongoing, setOngoing }) => {
   const axiosPublic = useAxiosPublic();
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const { data: tasks = [], refetch } = useQuery({
     queryKey: ["tasks", "ongoing"],
     queryFn: async () => {
-        const res = await axiosPublic.get(`/todo?status=ongoing&email=${user.email}`);
+      const res = await axiosPublic.get(
+        `/todo?status=ongoing&email=${user.email}`
+      );
       return res.data;
     },
   });
@@ -22,7 +24,7 @@ const Ongoing = ({setComplete, ongoing, setOngoing}) => {
       if (res.data.modifiedCount > 0) {
         refetch();
         toast.success("Task Completed", { id: toastId });
-        setComplete(true)
+        setComplete(true);
       } else {
         toast.error("Something Wrong", { id: toastId });
         console.log(res.data);
@@ -30,45 +32,85 @@ const Ongoing = ({setComplete, ongoing, setOngoing}) => {
     });
   };
   if (ongoing) {
-    refetch()
-    setOngoing(false)
+    refetch();
+    setOngoing(false);
   }
+
+  // delete
+  const handelDelete = (id) => {
+    const toastId = toast.loading("Deleting....");
+    axiosPublic.delete(`/todo/${id}`).then((res) => {
+      if (res.data.deletedCount > 0) {
+        toast.success("Deleted", { id: toastId });
+        refetch();
+      } else {
+        toast.error("Something Wrong", { id: toastId });
+      }
+    });
+  };
+
   return (
-    <div className=" text-white  mb-10">
-      <h1 className=" text-4xl text-white font-semibold mb-4">Ongoing</h1>
-          <div className="overflow-x-auto max-h-60 overflow-scroll rounded-lg border-2 shadow-2xl shadow-red-500 glass">
-            <table className="table ">
-              {/* head */}
-              <thead>
-                <tr className=" text-gray-800 text-lg">
-                  <th></th>
-                  <th>Title</th>
-                  <th>Priority</th>
-                  <th>Deadline</th>
-                </tr>
-              </thead>
-              <tbody>
-                {/* row 1 */}
-               {
-                tasks.map((task) => (
-                  <tr key={task._id}>
-                    <td onClick={() => handelStatus(task._id)}>
+    <div className=" text-gray-100  mb-10">
+      <h1 className=" text-4xl text-gray-100 font-semibold mb-4">Ongoing</h1>
+      <div className="overflow-x-auto max-h-60 overflow-scroll rounded-lg border-2 shadow-2xl shadow-red-500 glass">
+        <table className="table ">
+          {/* head */}
+          <thead>
+            <tr className=" text-gray-800 text-lg">
+              <th></th>
+              <th>Title</th>
+              <th>Priority</th>
+              <th>Deadline</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            {tasks.map((task) => (
+              <tr key={task._id}>
+                <td onClick={() => handelStatus(task._id)}>
                   <input
                     type="radio"
                     name="radio-8"
                     className="radio radio-accent glass "
                   />
                 </td>
-                    <td className=" max-w-32 overflow-x-scroll">{task.title}</td>
-                    <td>{task.priority}</td>
-                    <td>{task.deadline}</td>
-                  </tr>
-                ))
-               }
-              </tbody>
-            </table>
-          </div>
-        </div>
+                <td
+                  onClick={() =>
+                    document.getElementById("my_modal_1").showModal()
+                  }
+                  className=" max-w-32 overflow-x-scroll cursor-pointer"
+                >
+                  {task.title}
+                  <dialog id="my_modal_1" className="modal">
+                    <div className="modal-box text-gray-100 glass text-lg ">
+                      <h3 className="font-bold text-3xl">{task.title}</h3>
+                      <p className="pt-4">Description:{task.postDescription}</p>
+                      <p className="py-1">Deadline:{task.deadline}</p>
+                      <p className="">Priority:{task.priority}</p>
+                      <div className="modal-action">
+                        <form method="dialog">
+                          {/* if there is a button in form, it will close the modal */}
+                          <button className="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+                </td>
+                <td>{task.priority}</td>
+                <td>{task.deadline}</td>
+                <td
+                  onClick={() => handelDelete(task._id)}
+                  className=" cursor-pointer hover:text-teal-500"
+                >
+                  x
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 
