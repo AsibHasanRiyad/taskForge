@@ -7,7 +7,7 @@ import People from "../../Components/People/People";
 const Home = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className=" px-8 lg:px-20 py-0 lg:py-10">
+    <div className=" px-0 lg:px-20 py-0 lg:py-10">
       <Banner />
       {user && <Dashboard />}
       <People />

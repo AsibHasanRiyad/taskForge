@@ -1,9 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import './Navbar.css'
+import "./Navbar.css";
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,7 +13,10 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div style={{zIndex:10}} className="drawer w-screen  bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] pb-2">
+    <div
+      style={{ zIndex: 10 }}
+      className="drawer w-screen  bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] pb-2"
+    >
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
@@ -28,7 +30,7 @@ const Navbar = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                color="#FF7594"
+                color="white"
                 viewBox="0 0 24 24"
                 className="inline-block w-8 h-8 stroke-current"
               >
@@ -42,8 +44,10 @@ const Navbar = () => {
             </label>
           </div>
           <div className="flex-1 ">
-            <Link to={'/'}>
-              <h1 className=" text-4xl font-semibold text-[#2E1619]">Task<span className=" text-white">Forge</span></h1>
+            <Link to={"/"}>
+              <h1 className=" text-4xl font-semibold text-[#2E1619]">
+                Task<span className=" text-white">Forge</span>
+              </h1>
             </Link>
           </div>
           <div className="flex-none hidden lg:block">
@@ -58,8 +62,7 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
-             
-             
+
               {user && (
                 <>
                   <li className="hover:text-gray-100 ">
@@ -72,7 +75,7 @@ const Navbar = () => {
                       About Us
                     </NavLink>
                   </li>
-                 
+
                   <li className="hover:text-gray-100 ">
                     <NavLink
                       to={"/contact"}
@@ -83,7 +86,7 @@ const Navbar = () => {
                       Contact
                     </NavLink>
                   </li>
-                 
+
                   <li className="hover:text-gray-100 ">
                     <NavLink
                       to={"/0"}
@@ -98,10 +101,7 @@ const Navbar = () => {
               )}
               {user ? (
                 <div className="dropdown dropdown-end">
-                  <label
-                    tabIndex={0}
-                    className=" hover:cursor-pointer avatar "
-                  >
+                  <label tabIndex={0} className=" hover:cursor-pointer avatar ">
                     <div className="w-14 rounded-full">
                       <img src={user?.photoURL} />
                     </div>
@@ -145,7 +145,7 @@ const Navbar = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-60 min-h-full bg-base-200">
+        <ul className="menu w-60 min-h-full bg-[#FF7C65] text-white">
           {/* Sidebar content here */}
           <li className=" hover:text-gray-100 ">
             <NavLink
@@ -157,47 +157,38 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className=" hover:text-gray-100">
-            <NavLink
-              to={"/assignments"}
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Assignments
-            </NavLink>
-          </li>
           {user && (
             <>
-              <li>
+              <li className="hover:text-gray-100 ">
                 <NavLink
-                  to={"/createAssignments"}
+                  to={"/aboutUs"}
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Create Assignments
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to={"/myAssignments"}
-                  className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                  }
-                >
-                  My Assignments
+                  About Us
                 </NavLink>
               </li>
 
-              <li>
+              <li className="hover:text-gray-100 ">
                 <NavLink
-                  to={"/submittedAssignments"}
+                  to={"/contact"}
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Submitted Assignments
+                  Contact
+                </NavLink>
+              </li>
+
+              <li className="hover:text-gray-100 ">
+                <NavLink
+                  to={"/0"}
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  Something
                 </NavLink>
               </li>
             </>

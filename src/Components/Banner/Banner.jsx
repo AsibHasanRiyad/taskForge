@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div>
-      <div className="bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-md ">
+      <div className="bg-gradient-to-r from-[#FF7594] via-[#FF797B] to-[#FF7C65] rounded-none lg:rounded-md ">
         <div className=" grid grid-cols-1 lg:grid-cols-2 items-center px-5 gap-5 lg:px-20 py-16">
           <div className=" ">
             <img

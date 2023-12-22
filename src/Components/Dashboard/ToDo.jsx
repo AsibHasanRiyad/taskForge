@@ -1,32 +1,39 @@
+/* eslint-disable react/prop-types */
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
-const ToDo = () => {
+const ToDo = ({reload,setReload}) => {
   const axiosPublic = useAxiosPublic();
   const {user} = useContext(AuthContext)
-  const { data: tasks = [] } = useQuery({
+  const { data: tasks = [], refetch } = useQuery({
     queryKey: ["tasks", "todo"],
     queryFn: async () => {
       const res = await axiosPublic.get(`/todo?status=todo&email=${user.email}`);
       return res.data;
     },
   });
+  // console.log(reload);
+  if (reload) {
+    refetch()
+  }
+  setReload(false)
+  console.log(reload);
   const handelDelete = (id) =>{
     const toastId = toast.loading("Deleting....");
-    console.log('object',id);
     axiosPublic.delete(`/todo/${id}`).then((res) =>{
-      console.log(res.data);
       if (res.data.deletedCount > 0) {
         toast.success('Deleted', {id: toastId});
+        refetch()
       }
       else{
         toast.error('Something Wrong', {id: toastId});
       }
     })
   }
+
   return (
     <div className=" text-white  mb-10">
       <h1 className=" text-4xl text-white font-semibold mb-4">Todo</h1>
@@ -44,10 +51,10 @@ const ToDo = () => {
               <tbody>
                 {/* row 1 */}
                {
-                tasks.map((task) => (
-                  <tr key={task._id}>
+                tasks.reverse().map((task) => (
+                  <tr draggable={true}  key={task._id}>
                     <td onClick={() =>handelDelete(task._id)} className=" cursor-pointer hover:text-teal-500">x</td>
-                    <td className=" max-w-32 overflow-x-scroll">{task.title}</td>
+                    <td className=" overflow-x-scroll">{task.title}</td>
                     <td>{task.priority}</td>
                     <td>{task.deadline}</td>
                   </tr>
