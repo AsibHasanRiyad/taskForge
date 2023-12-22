@@ -52,7 +52,7 @@ const AddTask = ({setReload}) => {
             <input
               type="date"
               {...register("deadline", { required: true })}
-              className="block w-full px-4 py-2 mt-2 text-gray-100 bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              className="block w-full min-h-10 px-4 py-2 mt-2 text-gray-100 bg-transparent border border-white  rounded-md       dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
             />
           </div>
           <div>
